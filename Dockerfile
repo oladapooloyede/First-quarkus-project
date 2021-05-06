@@ -15,9 +15,9 @@
 #
 ###
 FROM registry.access.redhat.com/ubi8/openjdk-11
-COPY target/code-with-quarkus-1.0.0-SNAPSHOT.jar first-quarkus.jar
+#COPY target/code-with-quarkus-1.0.0-SNAPSHOT.jar first-quarkus.jar
 
-EXPOSE 8080
-USER nonroot
+#EXPOSE 8080
+#USER nonroot
 
-ENTRYPOINT ["java", "-jar", "first-quarkus.jar"]
+#ENTRYPOINT ["java", "-jar", "first-quarkus.jar"]

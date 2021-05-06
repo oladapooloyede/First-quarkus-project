@@ -14,7 +14,7 @@
 # docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus
 #
 ###
-FROM quay.io/quarkus/quarkus-distroless-image:1.0
+FROM registry.access.redhat.com/ubi8/openjdk-11
 COPY target/*.jar first-quarkus.jar
 
 EXPOSE 8080

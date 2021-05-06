@@ -15,7 +15,7 @@
 #
 ###
 FROM quay.io/quarkus/quarkus-distroless-image:1.0
-COPY source/target/*.jar first-quarkus.jar
+COPY target/*.jar first-quarkus.jar
 
 EXPOSE 8080
 USER nonroot

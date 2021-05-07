@@ -15,7 +15,7 @@
 #
 ###
 FROM registry.access.redhat.com/ubi8/openjdk-11
-WORKDIR /source
+VOLUME /source
 RUN echo $(ls -1)
 COPY target/code-with-quarkus-1.0.0-SNAPSHOT.jar first-quarkus.jar
 

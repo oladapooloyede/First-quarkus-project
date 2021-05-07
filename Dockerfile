@@ -15,7 +15,8 @@
 #
 ###
 FROM registry.access.redhat.com/ubi8/openjdk-11
-VOLUME /source 
+WORKDIR /source
+RUN ls
 COPY target/code-with-quarkus-1.0.0-SNAPSHOT.jar first-quarkus.jar
 
 #EXPOSE 8080

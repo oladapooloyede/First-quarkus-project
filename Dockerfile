@@ -17,8 +17,7 @@
 FROM registry.access.redhat.com/ubi8/openjdk-11
 #VOLUME /source
 #RUN echo $(ls -1 /source/target)
-WORKDIR /workspace/source/
-COPY target/code-with-quarkus-1.0.0-SNAPSHOT.jar /deployments/
+ADD target/code-with-quarkus-1.0.0-SNAPSHOT.jar /deployments/
 
 #EXPOSE 8080
 #USER nonroot

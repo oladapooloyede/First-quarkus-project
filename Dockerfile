@@ -14,10 +14,10 @@
 # docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus
 #
 ###
-FROM registry.access.redhat.com/ubi8/openjdk-11
+FROM registry.access.redhat.com/ubi8/openjdk-11 AS MAVEN_BUILD
 #VOLUME /source
 #RUN echo $(ls -1 /source/target)
-COPY --from=maven-build target/code-with-quarkus-1.0.0-SNAPSHOT.jar first-quarkus.jar
+COPY --from=MAVEN_BUILD target/code-with-quarkus-1.0.0-SNAPSHOT.jar first-quarkus.jar
 
 EXPOSE 8080
 USER nonroot

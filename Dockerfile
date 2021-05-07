@@ -16,7 +16,7 @@
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3 
 
-RUN cd target
+RUN cd /workspace/source/target
 
 ARG JAR=code-with-quarkus-1.0.0-SNAPSHOT.jar
 

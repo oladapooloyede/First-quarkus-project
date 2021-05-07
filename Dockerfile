@@ -16,9 +16,11 @@
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3 
 
+VOLUME /workspace/source/target/
+
 ARG JAVA_PACKAGE=java-11-openjdk-headless
 ARG RUN_JAVA_VERSION=1.3.8
-ARG JAR=/workspace/source/target/code-with-quarkus-1.0.0-SNAPSHOT.jar
+ARG JAR=code-with-quarkus-1.0.0-SNAPSHOT.jar
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en'
 # Install java and the run-java script
 # Also set up permissions for user `1001`
